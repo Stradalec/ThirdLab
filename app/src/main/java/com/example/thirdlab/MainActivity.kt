@@ -1,6 +1,11 @@
 package com.example.thirdlab
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,10 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val editText: EditText =  findViewById(R.id.editText)
+        val checkBox: CheckBox = findViewById(R.id.checkBox)
+        val button: Button = findViewById(R.id.button)
+        val textView: TextView = findViewById(R.id.textView)
+        val progressBar: ProgressBar = findViewById(R.id.progressBar)
+        button.setOnClickListener(){
+            if(checkBox.isChecked()) {
+                var progress = progressBar.getProgress()
+                progressBar.setProgress(Math.min(progress + 10, 100))
+                var text = editText.getText()
+                textView.setText(text)
+            }
         }
     }
 }
