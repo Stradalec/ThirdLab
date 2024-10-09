@@ -65,30 +65,34 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <View
+            android:id="@+id/crutch"
+            android:layout_width="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/firstConstrantView"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="1"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="100dp"
+            app:layout_constraintLeft_toRightOf="@+id/crutch"
             app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/secondConstrantView"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text=""
-            app:layout_constraintLeft_toLeftOf="@id/firstConstrantView"
-            android:layout_marginLeft="150dp"
+            app:layout_constraintLeft_toRightOf="@id/firstConstrantView"
+            app:layout_constraintStart_toEndOf="@+id/thirdConstrantView"
             app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/thirdConstrantView"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:text=""
             app:layout_constraintStart_toEndOf="@id/firstConstrantView"
+            app:layout_constraintEnd_toStartOf="@id/secondConstrantView"
             app:layout_constraintTop_toBottomOf="@id/firstConstrantView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
