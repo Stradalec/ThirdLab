@@ -76,36 +76,37 @@
             android:id="@+id/firstConstrantView"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:text="1"
             app:layout_constraintEnd_toStartOf="@id/secondConstrantView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/secondConstrantView"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/firstConstrantView"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/thirdConstrantView"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/secondConstrantView"
-            android:text="" />
+            app:layout_constraintTop_toBottomOf="@id/secondConstrantView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
